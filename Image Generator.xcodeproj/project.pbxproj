@@ -8,22 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		7AF217F12A176574001E85B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF217F02A176574001E85B1 /* AppDelegate.swift */; };
-		7AF217F32A176574001E85B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF217F22A176574001E85B1 /* SceneDelegate.swift */; };
-		7AF217F52A176574001E85B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF217F42A176574001E85B1 /* ViewController.swift */; };
+		7AF217F52A176574001E85B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF217F42A176574001E85B1 /* MainViewController.swift */; };
 		7AF217F82A176574001E85B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF217F62A176574001E85B1 /* Main.storyboard */; };
 		7AF217FA2A176577001E85B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF217F92A176577001E85B1 /* Assets.xcassets */; };
 		7AF217FD2A176577001E85B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF217FB2A176577001E85B1 /* LaunchScreen.storyboard */; };
+		7AF218122A176EBF001E85B1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF218112A176EBF001E85B1 /* FavoriteViewController.swift */; };
+		7AF218182A178E2F001E85B1 /* UIImage + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF218172A178E2F001E85B1 /* UIImage + Ext.swift */; };
+		7AF2181D2A17D543001E85B1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2181C2A17D543001E85B1 /* TabBarViewController.swift */; };
+		7AF2181F2A17DBC1001E85B1 /* NSObject + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2181E2A17DBC1001E85B1 /* NSObject + Ext.swift */; };
+		7AF2190F2A188E47001E85B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2190E2A188E47001E85B1 /* Constants.swift */; };
+		7AF219132A18B3C3001E85B1 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF219122A18B3C3001E85B1 /* UIView + Ext.swift */; };
+		7AF219192A18C267001E85B1 /* FavoriteViewController + Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF219182A18C267001E85B1 /* FavoriteViewController + Cell.swift */; };
+		7AF2191B2A18C29A001E85B1 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2191A2A18C29A001E85B1 /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7AF217ED2A176574001E85B1 /* Image Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF217F02A176574001E85B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7AF217F22A176574001E85B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7AF217F42A176574001E85B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7AF217F42A176574001E85B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7AF217F72A176574001E85B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AF217F92A176577001E85B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF217FC2A176577001E85B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AF217FE2A176577001E85B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AF218112A176EBF001E85B1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		7AF218172A178E2F001E85B1 /* UIImage + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Ext.swift"; sourceTree = "<group>"; };
+		7AF2181C2A17D543001E85B1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7AF2181E2A17DBC1001E85B1 /* NSObject + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Ext.swift"; sourceTree = "<group>"; };
+		7AF2190E2A188E47001E85B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7AF219122A18B3C3001E85B1 /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
+		7AF219182A18C267001E85B1 /* FavoriteViewController + Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteViewController + Cell.swift"; sourceTree = "<group>"; };
+		7AF2191A2A18C29A001E85B1 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,70 @@
 		7AF217EF2A176574001E85B1 /* Image Generator */ = {
 			isa = PBXGroup;
 			children = (
-				7AF217F02A176574001E85B1 /* AppDelegate.swift */,
-				7AF217F22A176574001E85B1 /* SceneDelegate.swift */,
-				7AF217F42A176574001E85B1 /* ViewController.swift */,
-				7AF217F62A176574001E85B1 /* Main.storyboard */,
-				7AF217F92A176577001E85B1 /* Assets.xcassets */,
-				7AF217FB2A176577001E85B1 /* LaunchScreen.storyboard */,
+				7AF219152A18B9A3001E85B1 /* AppDelegate */,
+				7AF218162A178DBB001E85B1 /* Extensions */,
 				7AF217FE2A176577001E85B1 /* Info.plist */,
+				7AF219162A18BA8A001E85B1 /* Models */,
+				7AF219142A18B93E001E85B1 /* Resourse */,
+				7AF218042A1765FE001E85B1 /* VievControllers */,
 			);
 			path = "Image Generator";
+			sourceTree = "<group>";
+		};
+		7AF218042A1765FE001E85B1 /* VievControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AF219172A18C246001E85B1 /* FavoriteViewController */,
+				7AF217F42A176574001E85B1 /* MainViewController.swift */,
+				7AF2181C2A17D543001E85B1 /* TabBarViewController.swift */,
+			);
+			path = VievControllers;
+			sourceTree = "<group>";
+		};
+		7AF218162A178DBB001E85B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AF2181E2A17DBC1001E85B1 /* NSObject + Ext.swift */,
+				7AF218172A178E2F001E85B1 /* UIImage + Ext.swift */,
+				7AF219122A18B3C3001E85B1 /* UIView + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7AF219142A18B93E001E85B1 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				7AF217F92A176577001E85B1 /* Assets.xcassets */,
+				7AF2190E2A188E47001E85B1 /* Constants.swift */,
+				7AF217FB2A176577001E85B1 /* LaunchScreen.storyboard */,
+				7AF217F62A176574001E85B1 /* Main.storyboard */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		7AF219152A18B9A3001E85B1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7AF217F02A176574001E85B1 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7AF219162A18BA8A001E85B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7AF2191A2A18C29A001E85B1 /* ImageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7AF219172A18C246001E85B1 /* FavoriteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7AF218112A176EBF001E85B1 /* FavoriteViewController.swift */,
+				7AF219182A18C267001E85B1 /* FavoriteViewController + Cell.swift */,
+			);
+			path = FavoriteViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF217F52A176574001E85B1 /* ViewController.swift in Sources */,
+				7AF218122A176EBF001E85B1 /* FavoriteViewController.swift in Sources */,
+				7AF2191B2A18C29A001E85B1 /* ImageModel.swift in Sources */,
+				7AF217F52A176574001E85B1 /* MainViewController.swift in Sources */,
+				7AF219192A18C267001E85B1 /* FavoriteViewController + Cell.swift in Sources */,
+				7AF219132A18B3C3001E85B1 /* UIView + Ext.swift in Sources */,
+				7AF2181F2A17DBC1001E85B1 /* NSObject + Ext.swift in Sources */,
+				7AF218182A178E2F001E85B1 /* UIImage + Ext.swift in Sources */,
+				7AF2181D2A17D543001E85B1 /* TabBarViewController.swift in Sources */,
 				7AF217F12A176574001E85B1 /* AppDelegate.swift in Sources */,
-				7AF217F32A176574001E85B1 /* SceneDelegate.swift in Sources */,
+				7AF2190F2A188E47001E85B1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +371,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +400,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
