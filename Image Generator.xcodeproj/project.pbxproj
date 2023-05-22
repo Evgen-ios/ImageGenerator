@@ -20,6 +20,12 @@
 		7AF219132A18B3C3001E85B1 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF219122A18B3C3001E85B1 /* UIView + Ext.swift */; };
 		7AF219192A18C267001E85B1 /* FavoriteViewController + Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF219182A18C267001E85B1 /* FavoriteViewController + Cell.swift */; };
 		7AF2191B2A18C29A001E85B1 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2191A2A18C29A001E85B1 /* ImageModel.swift */; };
+		7AF2191D2A19B1E7001E85B1 /* UITableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2191C2A19B1E7001E85B1 /* UITableView + Ext.swift */; };
+		7AF219202A19B965001E85B1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2191E2A19B965001E85B1 /* DataModel.xcdatamodeld */; };
+		7AF219232A19BB33001E85B1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF219222A19BB33001E85B1 /* CoreDataManager.swift */; };
+		7AF219262A19BC07001E85B1 /* Entity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF219242A19BC07001E85B1 /* Entity+CoreDataClass.swift */; };
+		7AF219272A19BC07001E85B1 /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF219252A19BC07001E85B1 /* Entity+CoreDataProperties.swift */; };
+		7AF2192A2A19BEF2001E85B1 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF219292A19BEF2001E85B1 /* UIImageTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,12 @@
 		7AF219122A18B3C3001E85B1 /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 		7AF219182A18C267001E85B1 /* FavoriteViewController + Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteViewController + Cell.swift"; sourceTree = "<group>"; };
 		7AF2191A2A18C29A001E85B1 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		7AF2191C2A19B1E7001E85B1 /* UITableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Ext.swift"; sourceTree = "<group>"; };
+		7AF2191F2A19B965001E85B1 /* Base.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Base.xcdatamodel; sourceTree = "<group>"; };
+		7AF219222A19BB33001E85B1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7AF219242A19BC07001E85B1 /* Entity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7AF219252A19BC07001E85B1 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7AF219292A19BEF2001E85B1 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 		7AF217EF2A176574001E85B1 /* Image Generator */ = {
 			isa = PBXGroup;
 			children = (
+				7AF219212A19BAFE001E85B1 /* Managers */,
 				7AF219152A18B9A3001E85B1 /* AppDelegate */,
 				7AF218162A178DBB001E85B1 /* Extensions */,
 				7AF217FE2A176577001E85B1 /* Info.plist */,
@@ -96,6 +109,7 @@
 				7AF2181E2A17DBC1001E85B1 /* NSObject + Ext.swift */,
 				7AF218172A178E2F001E85B1 /* UIImage + Ext.swift */,
 				7AF219122A18B3C3001E85B1 /* UIView + Ext.swift */,
+				7AF2191C2A19B1E7001E85B1 /* UITableView + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -107,6 +121,7 @@
 				7AF2190E2A188E47001E85B1 /* Constants.swift */,
 				7AF217FB2A176577001E85B1 /* LaunchScreen.storyboard */,
 				7AF217F62A176574001E85B1 /* Main.storyboard */,
+				7AF2191E2A19B965001E85B1 /* DataModel.xcdatamodeld */,
 			);
 			path = Resourse;
 			sourceTree = "<group>";
@@ -122,6 +137,7 @@
 		7AF219162A18BA8A001E85B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7AF219282A19BC17001E85B1 /* CodeData */,
 				7AF2191A2A18C29A001E85B1 /* ImageModel.swift */,
 			);
 			path = Models;
@@ -134,6 +150,24 @@
 				7AF219182A18C267001E85B1 /* FavoriteViewController + Cell.swift */,
 			);
 			path = FavoriteViewController;
+			sourceTree = "<group>";
+		};
+		7AF219212A19BAFE001E85B1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7AF219222A19BB33001E85B1 /* CoreDataManager.swift */,
+				7AF219292A19BEF2001E85B1 /* UIImageTransformer.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7AF219282A19BC17001E85B1 /* CodeData */ = {
+			isa = PBXGroup;
+			children = (
+				7AF219242A19BC07001E85B1 /* Entity+CoreDataClass.swift */,
+				7AF219252A19BC07001E85B1 /* Entity+CoreDataProperties.swift */,
+			);
+			path = CodeData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,15 +241,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF219272A19BC07001E85B1 /* Entity+CoreDataProperties.swift in Sources */,
+				7AF2191D2A19B1E7001E85B1 /* UITableView + Ext.swift in Sources */,
 				7AF218122A176EBF001E85B1 /* FavoriteViewController.swift in Sources */,
 				7AF2191B2A18C29A001E85B1 /* ImageModel.swift in Sources */,
 				7AF217F52A176574001E85B1 /* MainViewController.swift in Sources */,
+				7AF219202A19B965001E85B1 /* DataModel.xcdatamodeld in Sources */,
 				7AF219192A18C267001E85B1 /* FavoriteViewController + Cell.swift in Sources */,
+				7AF2192A2A19BEF2001E85B1 /* UIImageTransformer.swift in Sources */,
 				7AF219132A18B3C3001E85B1 /* UIView + Ext.swift in Sources */,
+				7AF219232A19BB33001E85B1 /* CoreDataManager.swift in Sources */,
 				7AF2181F2A17DBC1001E85B1 /* NSObject + Ext.swift in Sources */,
 				7AF218182A178E2F001E85B1 /* UIImage + Ext.swift in Sources */,
 				7AF2181D2A17D543001E85B1 /* TabBarViewController.swift in Sources */,
 				7AF217F12A176574001E85B1 /* AppDelegate.swift in Sources */,
+				7AF219262A19BC07001E85B1 /* Entity+CoreDataClass.swift in Sources */,
 				7AF2190F2A188E47001E85B1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +476,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7AF2191E2A19B965001E85B1 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7AF2191F2A19B965001E85B1 /* Base.xcdatamodel */,
+			);
+			currentVersion = 7AF2191F2A19B965001E85B1 /* Base.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7AF217E52A176574001E85B1 /* Project object */;
 }

@@ -14,13 +14,14 @@ class MainViewController: UIViewController {
     private var urlHost = Constants.host
     private var imageSize: ImageSize = .medium
     private var imageModel: ImageModel?
-
+    let imageLimit = 10
+    
     private lazy var segmentedControl = UISegmentedControl( items: ImageSize.allCases.map { $0.rawValue }).apply {
         $0.selectedSegmentIndex = 1
         $0.addTarget(self, action: #selector(indexChanged(_:)), for: .valueChanged)
         $0.backgroundColor = .systemBlue.withAlphaComponent(0.1)
     }
-
+    
     private lazy var imageView = UIImageView().apply {
         $0.image = UIImage(named: "camera.macro")?.withRenderingMode(.alwaysTemplate)
         $0.tintColor = .white.withAlphaComponent(0.05)
@@ -84,13 +85,13 @@ class MainViewController: UIViewController {
     }
     
     private func setupKeyboard() {
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
-
+    
     private func layoutConstraints() {
         NSLayoutConstraint.activate([
-
+            
             segmentedControl.bottomAnchor.constraint(equalTo: imageView.safeAreaLayoutGuide.topAnchor, constant: -10),
             segmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             segmentedControl.widthAnchor.constraint(equalTo: imageView.safeAreaLayoutGuide.widthAnchor),
@@ -132,6 +133,7 @@ class MainViewController: UIViewController {
                 action: #selector(addFavorite)
             )
             button.tintColor = .systemBlue.withAlphaComponent(0.8)
+            button.isEnabled = false
             self.navigationItem.rightBarButtonItem = button
         }
     }
@@ -146,9 +148,31 @@ class MainViewController: UIViewController {
         return components.url
     }
     
+    private func showAlert(name: String) {
+        let alert = UIAlertController(title: "Внимание!",
+                                      message: "Изображение по запросу \(name) уже содержится избранном!",
+                                      preferredStyle: .alert)
+        
+        let okButton = UIAlertAction(title: "Ok", style: .destructive)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
+    }
+    
     // MARK: - Private @objc Methods
     @objc private func addFavorite() {
         print("Added favorite")
+        guard let imageModel else { return }
+        
+        if CoreDataManager.shared.checkItem(model: imageModel) {
+            showAlert(name: imageModel.reguest)
+        } else {
+            if CoreDataManager.shared.getItems().count >= self.imageLimit {
+                guard let lastItem = CoreDataManager.shared.getItems().last else { return }
+                CoreDataManager.shared.removeItem(model: lastItem)
+            }
+            
+            CoreDataManager.shared.appendItem(model: imageModel)
+        }
     }
     
     @objc private func setImage() {
@@ -167,6 +191,7 @@ class MainViewController: UIViewController {
             
             guard let request = self.textField.text else { return }
             self.imageModel = ImageModel(image: image, request: request)
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
         }
     }
     
@@ -180,7 +205,7 @@ class MainViewController: UIViewController {
             updateLayoutConstraints(height: keyboardHeight - 65)
         }
     }
-
+    
     @objc private func keyboardWillDisappear(notification: NSNotification) {
         sendView.bottomConstraint?.constant = -10
         view.layoutIfNeeded()
@@ -190,5 +215,5 @@ class MainViewController: UIViewController {
 extension MainViewController: UITextFieldDelegate {
     @objc func textFieldDidChange(_ textField: UITextField) {
         sendButton.isEnabled = !(textField.text?.isEmpty ?? true)
-     }
+    }
 }

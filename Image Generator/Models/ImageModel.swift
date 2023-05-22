@@ -9,10 +9,12 @@ import UIKit
 
 class ImageModel {
     var image: UIImage
-    var request: String
+    var reguest: String
+    var time: Date
     
     init(image: UIImage, request: String) {
         self.image = image
-        self.request = request
+        self.reguest = request
+        self.time = Date()
     }
 }
