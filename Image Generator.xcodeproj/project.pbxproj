@@ -143,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7A2B19202A1CCD02008F8149 /* README.md */,
+				7A2B191C2A1CCB37008F8149 /* Screenshots */,
 				7AF217EF2A176574001E85B1 /* Image Generator */,
 				7AF217EE2A176574001E85B1 /* Products */,
 			);
@@ -161,7 +162,6 @@
 		7AF217EF2A176574001E85B1 /* Image Generator */ = {
 			isa = PBXGroup;
 			children = (
-				7A2B191C2A1CCB37008F8149 /* Screenshots */,
 				7AF219152A18B9A3001E85B1 /* AppDelegate */,
 				7AF218162A178DBB001E85B1 /* Extensions */,
 				7AF217FE2A176577001E85B1 /* Info.plist */,
