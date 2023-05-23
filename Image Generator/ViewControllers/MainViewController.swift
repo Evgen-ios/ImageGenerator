@@ -145,26 +145,25 @@ class MainViewController: UIViewController {
         components.host = self.urlHost
         components.path = "/\(self.imageSize.rawValue)&"
         components.queryItems = [URLQueryItem(name: "text", value: textField.text)]
-        
         return components.url
     }
     
     private func showAlert(name: String) {
-        let alert = UIAlertController(title: "Внимание!",
-                                      message: "Изображение по запросу \(name) уже содержится избранном!",
+        let alert = UIAlertController(title: Constants.Alert.Attention.title,
+                                      message: Constants.Alert.Attention.message,
                                       preferredStyle: .alert)
         
-        let okButton = UIAlertAction(title: "Ok", style: .destructive)
+        let okButton = UIAlertAction(title: Constants.Alert.Buttons.ok, style: .destructive)
         alert.addAction(okButton)
         self.present(alert, animated: true)
     }
     
     private func showError() {
-        let alert = UIAlertController(title: "Ошибка",
-                                      message: "Не удалось получить изображение!",
+        let alert = UIAlertController(title: Constants.Alert.Attention.title,
+                                      message: Constants.Alert.Attention.message,
                                       preferredStyle: .alert)
         
-        let okButton = UIAlertAction(title: "Ok", style: .destructive)
+        let okButton = UIAlertAction(title: Constants.Alert.Buttons.ok, style: .destructive)
         alert.addAction(okButton)
         self.present(alert, animated: true)
     }

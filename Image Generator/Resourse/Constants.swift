@@ -11,6 +11,22 @@ struct Constants {
     static let scheme = "https"
     static let host = "dummyimage.com"
     static let placeholder = "Введите запрос..."
+    
+    struct Alert {
+        struct Error {
+            static let title = "Ошибка"
+            static let message = "Не удалось получить изображение!"
+        }
+        
+        struct Attention {
+            static let title = "Внимание!"
+            static let message = "Изображение уже содержится в избранном!"
+        }
+
+        struct Buttons {
+            static let ok = "Ok"
+        }
+    }
 }
 
 public enum ImageSize: String, CaseIterable {
