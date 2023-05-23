@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
     }
     
     private lazy var textField = UITextField().apply {
+        $0.accessibilityIdentifier = "textField"
         $0.font = UIFont.preferredFont(forTextStyle: .body)
         $0.placeholder = Constants.placeholder
         $0.borderStyle = UITextField.BorderStyle.roundedRect
@@ -39,6 +40,7 @@ class MainViewController: UIViewController {
     }
     
     private var sendButton = UIButton().apply {
+        $0.accessibilityIdentifier = "sendButton"
         $0.addTarget(.none, action: #selector(setImage), for: .touchUpInside)
         $0.setImage( UIImage(named: "camera.macro")?.withRenderingMode(.alwaysTemplate), for: .normal)
         $0.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -91,7 +93,6 @@ class MainViewController: UIViewController {
     
     private func layoutConstraints() {
         NSLayoutConstraint.activate([
-            
             segmentedControl.bottomAnchor.constraint(equalTo: imageView.safeAreaLayoutGuide.topAnchor, constant: -10),
             segmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             segmentedControl.widthAnchor.constraint(equalTo: imageView.safeAreaLayoutGuide.widthAnchor),
@@ -158,13 +159,23 @@ class MainViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    private func showError() {
+        let alert = UIAlertController(title: "Ошибка",
+                                      message: "Не удалось получить изображение!",
+                                      preferredStyle: .alert)
+        
+        let okButton = UIAlertAction(title: "Ok", style: .destructive)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
+    }
+    
     // MARK: - Private @objc Methods
     @objc private func addFavorite() {
-        print("Added favorite")
         guard let imageModel else { return }
         
-        if CoreDataManager.shared.checkItem(model: imageModel) {
+        if CoreDataManager.shared.checkItem(by: imageModel.reguest) {
             showAlert(name: imageModel.reguest)
+            
         } else {
             if CoreDataManager.shared.getItems().count >= self.imageLimit {
                 guard let lastItem = CoreDataManager.shared.getItems().last else { return }
@@ -176,14 +187,17 @@ class MainViewController: UIViewController {
     }
     
     @objc private func setImage() {
-        sendButton.isEnabled = false
+        self.sendButton.isEnabled = false
+        self.textField.isEnabled = false
         UIImage.getImage(getUrl()?.absoluteString) { image, error in
             defer {
                 self.sendButton.isEnabled = true
+                self.textField.isEnabled = true
             }
             
             if error != nil {
-                print("Error")
+                self.showError()
+                return
             }
             
             guard let image else { return }

@@ -12,14 +12,25 @@ extension UIImage {
     class func getImage(_ urlString: String?, completion: @escaping (UIImage?, Error?) -> Void) {
         guard let api = urlString,
               let apiUrl = URL(string: api) else {
-            completion(nil, nil)
+            DispatchQueue.main.async {
+                completion(nil, nil)
+            }
             return
         }
         
         let session = URLSession(configuration: .default)
         session.dataTask(with: apiUrl){ data, _, error  in
+            if let error = error {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
+                return
+            }
+            
             guard let data = data else {
-                completion(nil, nil)
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
                 return
             }
             

@@ -12,9 +12,7 @@ public class CoreDataManager {
     
     // MARK: - Properties
     static let shared = CoreDataManager()
-    //static let viewContext = self.persistentContainer.viewContext
     
-    // MARK: - Core Data
     private var persistentContainer: NSPersistentContainer = {
         ValueTransformer.setValueTransformer(UIImageTransformer(), forName: NSValueTransformerName("UIImageTransformer"))
         
@@ -27,6 +25,7 @@ public class CoreDataManager {
         return container
     }()
     
+    // MARK: - Methods
     func appendItem(model: ImageModel) {
         let imageData = ImageCoreData(context: persistentContainer.viewContext)
         imageData.reguest = model.reguest
@@ -50,8 +49,8 @@ public class CoreDataManager {
         return items.sorted(by: { $0.time > $1.time } )
     }
     
-    func checkItem(model: ImageModel) -> Bool {
-        getItems().contains(where: {  $0.reguest == model.reguest })
+    func checkItem(by key: String) -> Bool {
+        getItems().contains(where: {  $0.reguest == key })
     }
     
 }

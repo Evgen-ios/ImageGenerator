@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 
-
 extension ImageCoreData {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ImageCoreData> {

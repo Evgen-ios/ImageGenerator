@@ -37,6 +37,7 @@ class FavoriteViewController: UIViewController {
         super.viewWillAppear(animated)
         self.items = CoreDataManager.shared.getItems()
         self.tableView.reloadData()
+        self.tableView.backgroundColor = .white
     }
     
     @objc private func changeEdit() {
