@@ -52,6 +52,7 @@
 		7A2B191E2A1CCCB9008F8149 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		7A2B191F2A1CCCB9008F8149 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		7A2B19202A1CCD02008F8149 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7A2B19212A1CEEC4008F8149 /* FirstTask.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FirstTask.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7AD1825F2A1BC090007C4DB7 /* ImageGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD182612A1BC090007C4DB7 /* ImageGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorTests.swift; sourceTree = "<group>"; };
 		7AD1826C2A1BC264007C4DB7 /* ImageGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +143,7 @@
 		7AF217E42A176574001E85B1 = {
 			isa = PBXGroup;
 			children = (
+				7A2B19212A1CEEC4008F8149 /* FirstTask.playground */,
 				7A2B19202A1CCD02008F8149 /* README.md */,
 				7A2B191C2A1CCB37008F8149 /* Screenshots */,
 				7AF217EF2A176574001E85B1 /* Image Generator */,
