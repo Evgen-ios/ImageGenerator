@@ -159,8 +159,8 @@ class MainViewController: UIViewController {
     }
     
     private func showError() {
-        let alert = UIAlertController(title: Constants.Alert.Attention.title,
-                                      message: Constants.Alert.Attention.message,
+        let alert = UIAlertController(title: Constants.Alert.Error.title,
+                                      message: Constants.Alert.Error.message,
                                       preferredStyle: .alert)
         
         let okButton = UIAlertAction(title: Constants.Alert.Buttons.ok, style: .destructive)
