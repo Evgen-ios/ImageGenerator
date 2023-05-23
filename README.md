@@ -4,6 +4,6 @@
 ##### Used Xcode 12.5 and Swift
 
 ## Screenshots
-![Screenshots](https://github.com/Evgen-ios/ImageGenerator/Screeshots/1?raw=true)
-![Screenshots](https://github.com/Evgen-ios/ImageGenerator/Screeshots/2?raw=true)
-![Screenshots](https://github.com/Evgen-ios/ImageGenerator/Screeshots/3?raw=true)
+![Screenshot](https://github.com/Evgen-ios/ImageGenerator/blob/main/Screenshots/1.png?raw=true)
+![Screenshot](https://github.com/Evgen-ios/ImageGenerator/blob/main/Screenshots/2.png?raw=true)
+![Screenshot](https://github.com/Evgen-ios/ImageGenerator/blob/main/Screenshots/3.png?raw=true)
